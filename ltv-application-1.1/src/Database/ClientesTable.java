@@ -7,6 +7,17 @@ public class ClientesTable {
 	private String TELEFONO;
 	private String UBICACION;
 	
+	public ClientesTable() {
+		
+	}
+	
+	public ClientesTable(String Nombre, String Email, String Telefono, String Ubicacion) {
+		this.NOMBRE=Nombre;
+		this.EMAIL=Email;
+		this.TELEFONO=Telefono;
+		this.UBICACION=Ubicacion;
+	}
+	
 	public String getNOMBRE() {
 		return NOMBRE;
 	}
