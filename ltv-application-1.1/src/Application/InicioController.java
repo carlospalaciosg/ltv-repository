@@ -22,10 +22,13 @@ public class InicioController {
 
 	///////////////////////////////////////////////////////////////////////////
 	// Methods ////////////////////////////////////////////////////////////////
+	public void print(String mss) { System.out.print(mss); }
+	
 	public void callInicio () {
 		try {
 			objDatabase.PrepareUsuarios();
-			user = objDatabase.CheckUsuarios(txtUsuario.getText());
+			user = objDatabase.findUsuario(txtUsuario.getText());
+			
 			if(user.getCLAVE().equals(txtContrasena.getText())) {
 				btnInicio.getScene().getWindow().hide();
 				switch (user.getCARGO().charAt(0)) {

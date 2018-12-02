@@ -13,6 +13,8 @@ public class DataBase {
 	
 ////////////PREPARACION DE STATEMENTS \\\\\\\\ \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 	
+	public void print(String mss) { System.out.print(mss); }
+	
 	public void PrepareSolicitudes() throws Exception {
 		Conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ltv-database","root","");
 		stInsert = Conexion.prepareStatement("INSERT INTO solicitudestable VALUES (?,?,?,?,?)");
@@ -115,9 +117,11 @@ public class DataBase {
 		
 		stCheck.setString(1, Nombre);
 		ResultSet miResultset=stCheck.executeQuery();
+		miResultset.next();
+		print(miResultset.getString("clave"));
 		
 		while(miResultset.next()) {
-			if(Nombre.equals(miResultset.getString("usuario"))) {
+			if(Nombre.equals(miResultset.getString("nombre"))) {
 				Usuario = new UsuariosTable(miResultset.getString("nombre"), miResultset.getString("email"), 
 						miResultset.getString("cargo"), miResultset.getString("usuario"), miResultset.getString("clave"), 
 						miResultset.getString("disponible"));
@@ -127,8 +131,19 @@ public class DataBase {
 		return Usuario;
 	}catch(SQLException ex) {System.out.println("Error al consultar usuario");
     System.out.println(ex.getMessage()); return null;}
-		
-		
+	}
+	
+	public UsuariosTable findUsuario(String Usuario) {
+		try {
+			stCheck.setString(1, Usuario);
+			ResultSet miResultset=stCheck.executeQuery();
+			miResultset.next();
+			return new UsuariosTable(miResultset.getString("nombre"), miResultset.getString("email"), 
+					miResultset.getString("cargo"), miResultset.getString("usuario"), miResultset.getString("clave"), 
+					miResultset.getString("disponible"));
+		}catch(Exception e) {
+			return null;
+		}
 	}
 	
 	public void UpdateUsuarios(String Nombre) {
