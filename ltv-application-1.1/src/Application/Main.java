@@ -24,7 +24,7 @@ public class Main extends Application {
 		Parent pane = FXMLLoader.load(getClass().getResource(newFXML));
 		stage.setTitle("La Tienda del Viaje");
 		stage.setScene(new Scene(pane));
-		stage.setResizable(false);
+		stage.setResizable(true);
 		stage.setHeight(600);
 		stage.setWidth(900);
 		stage.show();
