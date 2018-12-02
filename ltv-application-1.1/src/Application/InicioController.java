@@ -39,9 +39,7 @@ public class InicioController {
 				System.out.println("Contraseña incorrecta");
 			}
 			
-		}catch(Exception e) {
-			
-		}
+		}catch(Exception e) { System.out.println(e.getMessage());}
 		
 		
 //		findUSUARIO(txtUsuario.getText());
