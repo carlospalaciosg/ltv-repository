@@ -1,56 +1,44 @@
 package Application;
 
-import Database.SolicitudesTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.ListView;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-public class ReservacionesController extends SolicitudesTable {
+public class ReservacionesController {
 
 	///////////////////////////////////////////////////////////////////////////
 	// Attributes /////////////////////////////////////////////////////////////
+	public MenuItem   btnNuevo;
+	public MenuItem   btnGuardar;
+	public MenuItem   btnCerrarSesion;
+	public MenuItem   btnSalir;
+	public MenuItem   btnDeshacer;
+	public MenuItem   btnPegar;
+	public MenuItem   btnCopiar;
+	public MenuItem   btnConsultaClientes;
+	public MenuItem   btnAcercaDe;
+	public TextArea   txtComentarios;
 	public DatePicker txtFecha;
 	public TextField  txtNombre;
-	public TextField  txtCorreo;
-	public TextArea   txtComentarios;
+	public TextField  txtCorreo;	
 	public TextField  txtTelefono;
-	public TextField  txtDestino;	
-	public Button     btnRegistrar;
-	public Button     btnNuevo;
-	public Main objMain = new Main();
-	public ListView<String> reservacionesList;
+	public TextField  txtDestino;
+
+	public ListView<String> lstSolicitudes;
 	public ObservableList<String> solicitudes = FXCollections.observableArrayList();
+	public Main objMain = new Main();
 
 	///////////////////////////////////////////////////////////////////////////
 	// Methods ////////////////////////////////////////////////////////////////
-	public void vdRegistrar () {
-		setFECHA(String.valueOf(txtFecha.getValue()));
-		setNOMBRE(txtNombre.getText());
-		setCORREO(txtCorreo.getText());
-		setTELEFONO(txtTelefono.getText());
-		setDESTINO(txtDestino.getText());
-		setCOMENTARIOS(txtComentarios.getText());
-		setAGENTE("Sin asignar");
-		setSTATUS('P');
-		regSolicitud();
-	}
-
-	public void vdBorrar () {
-		txtNombre.setText("");
-		txtCorreo.setText("");
-		txtComentarios.setText("");
-		txtTelefono.setText("");
-		txtDestino.setText("");
-	}
-
-	public void vdCapturaTab () {
+	public void callNuevo() {
 		
-		verSolicitud("Sin asignar");		
-		solicitudes.add(getNOMBRE() + " - " + getDESTINO());
-		reservacionesList.setItems(solicitudes);
+	}
+	
+	public void callGuardar() {
+		
 	}
 }
