@@ -9,11 +9,7 @@ public class SolicitudesTable {
 	private String USUARIO;
 	
 	public SolicitudesTable() {
-		this.FECHA=null;
-		this.CLIENTE=null;
-		this.SOLICITUD=null;
-		this.ESTATUS=null;
-		this.USUARIO=null;
+	
 	}
 	
 	public SolicitudesTable(String Fecha, String Cliente, String Solicitud, String Estatus, String Usuario) {
