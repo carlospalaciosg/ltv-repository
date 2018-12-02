@@ -28,7 +28,7 @@ public class DataBase {
 	    stUpdate = Conexion.prepareStatement("UPDATE usuariostable SET usuario=?, clave=? WHERE nombre=?");
 
 	}
-	
+
 	public void PrepareClientes() throws Exception {
 		Conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ltv-database","root","");
 		stInsert = Conexion.prepareStatement("INSERT INTO clientestable VALUES (?,?,?,?)");
