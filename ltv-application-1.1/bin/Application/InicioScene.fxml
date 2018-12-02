@@ -21,7 +21,7 @@
             <Label fx:id="lblUsuario" layoutX="116.0" layoutY="226.0" text="ID de agente" />
             <TextField fx:id="txtUsuario" layoutX="76.0" layoutY="250.0" />
             <Label fx:id="lblContrasena" layoutX="120.0" layoutY="289.0" text="Contraseña" />
-            <Button fx:id="btnInicio" layoutX="101.0" layoutY="366.0" mnemonicParsing="false" onAction="#vdInicio" text="Inicio de sesión" />
+            <Button fx:id="btnInicio" layoutX="101.0" layoutY="366.0" mnemonicParsing="false" onAction="#callInicio" text="Inicio de sesión" />
             <PasswordField fx:id="txtContrasena" layoutX="75.0" layoutY="318.0" />
          </children>
       </Pane>

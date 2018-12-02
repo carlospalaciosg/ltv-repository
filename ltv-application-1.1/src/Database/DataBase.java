@@ -24,7 +24,7 @@ public class DataBase {
 	public void PrepareUsuarios() throws Exception {
 		Conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/ltv-database","root","");
 		stInsert = Conexion.prepareStatement("INSERT INTO usuariostable VALUES (?,?,?,?,?,?)");
-	    stCheck = Conexion.prepareStatement("SELECT * FROM usuariostable WHERE nombre=?");
+	    stCheck = Conexion.prepareStatement("SELECT * FROM usuariostable WHERE usuario=?");
 	    stDelete = Conexion.prepareStatement("DELETE FROM usuariostable WHERE nombre=?");
 	    stUpdate = Conexion.prepareStatement("UPDATE usuariostable SET usuario=?, clave=? WHERE nombre=?");
 
@@ -117,7 +117,7 @@ public class DataBase {
 		ResultSet miResultset=stCheck.executeQuery();
 		
 		while(miResultset.next()) {
-			if(Nombre.equals(miResultset.getString("nombre"))) {
+			if(Nombre.equals(miResultset.getString("usuario"))) {
 				Usuario = new UsuariosTable(miResultset.getString("nombre"), miResultset.getString("email"), 
 						miResultset.getString("cargo"), miResultset.getString("usuario"), miResultset.getString("clave"), 
 						miResultset.getString("disponible"));
