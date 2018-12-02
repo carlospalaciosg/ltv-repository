@@ -7,14 +7,19 @@ public class UsuariosTable {
 	private String CARGO;
 	private String USUARIO;
 	private String CLAVE;
-	private boolean DISPONIBLE;
+	private String DISPONIBLE;
 	
 	public UsuariosTable () {
 		
 	}
 	
-	public UsuariosTable (String Nombre, String Email, String Cargo, String Usuario, ) {
-		
+	public UsuariosTable (String Nombre, String Email, String Cargo, String Usuario, String Clave, String Disponible ) {
+		this.NOMBRE=Nombre;
+		this.EMAIL=Email;
+		this.CARGO=Cargo;
+		this.USUARIO=Usuario;
+		this.CLAVE=Clave;
+		this.DISPONIBLE=Disponible;
 	}
 	
 	public String getNOMBRE() {
@@ -29,10 +34,10 @@ public class UsuariosTable {
 	public void setEMAIL(String eMAIL) {
 		EMAIL = eMAIL;
 	}
-	public char getCARGO() {
+	public String getCARGO() {
 		return CARGO;
 	}
-	public void setCARGO(char cARGO) {
+	public void setCARGO(String cARGO) {
 		CARGO = cARGO;
 	}
 	public String getUSUARIO() {
@@ -47,10 +52,10 @@ public class UsuariosTable {
 	public void setCLAVE(String cLAVE) {
 		CLAVE = cLAVE;
 	}
-	public boolean isDISPONIBLE() {
+	public String isDISPONIBLE() {
 		return DISPONIBLE;
 	}
-	public void setDISPONIBLE(boolean dISPONIBLE) {
+	public void setDISPONIBLE(String dISPONIBLE) {
 		DISPONIBLE = dISPONIBLE;
 	}
 	
