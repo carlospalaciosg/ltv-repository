@@ -1,11 +1,11 @@
 package Database;
 
 public class ClientesTable {
-	
-	private String  NOMBRE;
-	private String  EMAIL;
-	private String  TELEFONO;
-	private String  UBICACION;
+
+	private String NOMBRE;
+	private String EMAIL;
+	private String TELEFONO;
+	private String UBICACION;
 	
 	public String getNOMBRE() {
 		return NOMBRE;
@@ -31,5 +31,6 @@ public class ClientesTable {
 	public void setUBICACION(String uBICACION) {
 		UBICACION = uBICACION;
 	}
+	
 	
 }
