@@ -4,10 +4,18 @@ public class UsuariosTable {
 
 	private String NOMBRE;
 	private String EMAIL;
-	private char CARGO;
+	private String CARGO;
 	private String USUARIO;
 	private String CLAVE;
 	private boolean DISPONIBLE;
+	
+	public UsuariosTable () {
+		
+	}
+	
+	public UsuariosTable (String Nombre, String Email, String Cargo, String Usuario, ) {
+		
+	}
 	
 	public String getNOMBRE() {
 		return NOMBRE;

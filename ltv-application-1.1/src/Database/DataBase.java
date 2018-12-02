@@ -49,7 +49,7 @@ public class DataBase {
 	      }
 	    }
 	
-	//////////// SOLICITUDES \\\\\\\\
+	//////////// SOLICITUDES \\\\\\\\ \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 	
 	public SolicitudesTable CheckSolicitudes(String Cliente) {
 		SolicitudesTable Solicitud = null;
@@ -108,7 +108,7 @@ public class DataBase {
 	}
 	
 	
-	//////////// USUARIOS \\\\\\\\\\\\\
+	//////////// USUARIOS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 	public void CheckUsuarios() {
 		
 	}
@@ -126,7 +126,7 @@ public class DataBase {
 	}
 	
 	
-	//////////// CLIENTES \\\\\\\\\\\\\\
+	//////////// CLIENTES \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 	public void CheckClientes() {
 		
 	}
