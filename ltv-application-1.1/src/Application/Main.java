@@ -30,9 +30,9 @@ public class Main extends Application {
 		stage.show();
 	}
 
-	public void addScene(String addFXML) throws Exception {
+	public void addScene(String AddFXML) throws Exception {
 		Stage stage = new Stage();
-		Parent pane = FXMLLoader.load(getClass().getResource(addFXML));
+		Parent pane = FXMLLoader.load(getClass().getResource(AddFXML));
 		stage.setTitle("La Tienda del Viaje");
 		stage.setScene(new Scene(pane));
 		stage.setResizable(false);
